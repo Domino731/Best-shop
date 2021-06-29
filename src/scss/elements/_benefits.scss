@@ -1,9 +1,11 @@
 .benefits {
   padding: 100px 0;
   background-color: $color-light-grey;
-  &__container{
+
+  &__container {
     padding: 0 100px;
   }
+
   &__element {
     background-color: $color-white;
     display: flex;
@@ -13,27 +15,36 @@
     border-radius: 5px;
     border: 1px solid #E8E9ED;
   }
+
+  &__title {
+    text-align: left;
+  }
+
   &__info {
     max-width: 415px;
     margin: 90px 36px;
-    &::after{
+
+    &::after {
       display: block;
       height: 4px;
       margin-top: 50px;
       content: "";
       width: 332px;
     }
-    &--redish{
+
+    &--redish {
       &::after {
         background-color: $color-redish;
       }
     }
-    &--blue{
+
+    &--blue {
       &::after {
         background-color: $color-primary;
       }
     }
-    &--green{
+
+    &--green {
       &::after {
         background-color: $color-green;
       }
@@ -45,6 +56,7 @@
     margin-top: 30px;
     line-height: 1.375rem;
   }
+
   &__image {
     position: relative;
   }
@@ -63,6 +75,7 @@
   margin-right: 117px;
   margin-bottom: 38px;
 }
+
 .benefits__element--notebook .benefits__image::before {
   content: "";
   width: 220px;
@@ -75,6 +88,7 @@
   right: -35px;
   top: -53px;
 }
+
 .benefits__element--notebook .benefits__image img {
   width: 386px;
   height: auto;
@@ -146,17 +160,18 @@
 }
 
 // animations
-.benefits__element--image, .benefits__image{
+.benefits__element--image, .benefits__image {
   transition: 0.2s;
-  &:hover{
+
+  &:hover {
     transition: 0.2s;
     transform: scale(1.1);
   }
 }
 
-.benefits__info{
-  &:hover{
-    &::after{
+.benefits__info {
+  &:hover {
+    &::after {
       transition: 0.7s;
       width: 420px;
     }

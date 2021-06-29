@@ -31,6 +31,21 @@ h2 {
   &--large{
     padding: 22px 155px;
   }
+  &--basicPack{
+    position: relative;
+    font-size: 0.8125rem;
+    background-color: $color-redish;
+  }
+  &--proPack{
+    position: relative;
+    font-size: 0.8125rem;
+    background-color: $color-primary;
+  }
+  &--premiumPack{
+    position: relative;
+    font-size: 0.8125rem;
+    background-color: $color-green;
+  }
 }
 
 
