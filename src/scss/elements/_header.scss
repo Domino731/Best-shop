@@ -1,0 +1,43 @@
+.header {
+  height: 70px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  &__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+  }
+}
+
+.logo {
+  font-family: $font-raleway;
+  font-size: 2rem;
+  font-weight: 300;
+  color: $color-primary;
+}
+
+.nav {
+  &__link {
+    color: $color-grey;
+    font-weight: 700;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1875rem;
+
+    border-bottom: 4px solid transparent;
+    padding: 28px 18px 22px;
+    transition: 0.2s;
+    &:hover{
+      transition: 0.2s;
+      color: $color-black;
+
+      border-color: $color-primary;
+    }
+  }
+}
+
