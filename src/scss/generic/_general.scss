@@ -5,7 +5,11 @@ body {
 a {
   text-decoration: none;
 }
-
+h2 {
+  font-family: $font-raleway;
+  font-size: 2.25rem;
+  text-align: center;
+}
 .container {
   width: 1352px;
   margin: 0 auto;
