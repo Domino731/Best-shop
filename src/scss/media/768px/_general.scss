@@ -1,0 +1,17 @@
+@media (max-width: 768px){
+  .container{
+    width: 600px;
+  }
+  body{
+    font-size: 15px;
+  }
+  h2{
+    font-size: 40px;
+  }
+  .btn--large {
+    padding: 18px 102px;
+  }
+  .benefits, .calc {
+    padding: 50px 0;
+  }
+}

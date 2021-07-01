@@ -39,6 +39,7 @@
 }
 
 .form {
+  width: 76%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -109,7 +110,7 @@
   }
 
   .fixCheckmark {
-  width: 117px;
+  width: 155px;
   }
 
   input:checked + .checkmark {

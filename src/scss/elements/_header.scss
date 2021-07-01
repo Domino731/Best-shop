@@ -12,6 +12,15 @@
   &__nav {
     display: flex;
   }
+  i[class*="fa-compass"]{
+    color: $color-primary;
+    display: none;
+    padding: 5px;
+    margin-left: 20px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }
 
 .logo {
@@ -22,6 +31,7 @@
 }
 
 .nav {
+
   &__link {
     color: $color-grey;
     font-weight: 700;
@@ -40,4 +50,3 @@
     }
   }
 }
-

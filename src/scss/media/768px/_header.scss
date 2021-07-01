@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .header {
+    &__container{
+      justify-content: space-between;}
+
+    i[class*="fa-compass"] {
+      display: block;
+      font-size: 1.875rem;
+      margin-right: 50px;
+    }
+    &__nav{
+
+      width: 100vh;
+      background: white;
+      position: absolute;
+      padding-left: 50px;
+      left: 0;
+      top: 70px;
+      height: 190px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+    }
+  }
+   .nav__link{
+     margin-bottom: 10px;
+     padding: 10px 20px;
+   }
+}
+.active{
+  display: flex;
+}

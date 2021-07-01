@@ -1,0 +1,49 @@
+@media (max-width: 600px) {
+  .container {
+    width: 460px;
+  }
+  h2{
+    font-size: 36px;
+  }
+
+  // statistics
+  .statistics {
+    &__container {
+      margin: 28px auto;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__element{
+      margin-bottom: 35px;
+    }
+  }
+
+  // benefits
+  .benefits{
+    &__element{
+      width: 430px;
+    }
+  }
+
+  //pricing
+  .pricing{
+    &__box {
+      width: 403px;
+      height: 340px;
+      &--basic, &--premium {
+        width: 370px;
+        height: 278px;
+      }
+    }
+  }
+
+  //price calc
+  .calc{
+    &__columns{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}

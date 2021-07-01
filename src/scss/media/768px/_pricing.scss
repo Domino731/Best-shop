@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .pricing {
+    &__boxes {
+      margin-top: 0;
+      flex-direction: column;
+    }
+
+    &__box {
+      width: 488px;
+      height: 404px;
+      margin: 35px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &--basic, &--premium {
+        width: 430px;
+        height: 350px;
+      }
+    }
+
+    &__info {
+      margin-right: 40px;
+    }
+
+    &__list {
+      margin-left: 40px;
+      text-align: left;
+    }
+  }
+}

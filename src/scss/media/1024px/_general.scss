@@ -1,0 +1,106 @@
+@media (max-width: 1024px) {
+
+  // general
+  .container {
+    width: 800px;
+  }
+
+  // statistics
+  .statistics {
+    &__container {
+      justify-content: space-evenly;
+    }
+  }
+
+  // benefits
+  .benefits {
+    &__element, &__double {
+      width: 720px;
+    }
+
+    &__info {
+      width: 250px;
+    }
+
+    &__info::after {
+      width: 230px;
+    }
+
+    &__info {
+      width: 300px;
+      margin: 52px 36px;
+
+      &::after {
+        width: 190px;
+      }
+    }
+
+    &__image {
+      margin-left: 20px;
+    }
+
+    .benefits__element--notebook .benefits__image img,
+    .benefits__element--phone .benefits__image img {
+      width: 260px;
+      height: auto;
+      margin-bottom: 28px;
+    }
+
+    .benefits__element--notebook .benefits__image {
+      margin-right: 78px;
+    }
+
+    .benefits__element--notebook .benefits__image::before {
+      width: 160px;
+      height: 160px;
+    }
+
+    .benefits__element--phone .benefits__image::before {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+
+  // pricing
+  .pricing {
+    &__box {
+      height: 400px;
+      width: 192px;
+
+      &--pro {
+        width: 256px;
+        height: 442px;
+      }
+    }
+
+    &__info {
+      margin-bottom: 30px;
+    }
+
+    // buttons
+    .btn--premiumPack, .btn--proPack, .btn--basicPack {
+      padding: 16px 45px;
+    }
+  }
+
+  // pricing calc
+  .calc {
+    &__form {
+      margin-left: 20px;
+    }
+
+    &__summary {
+      margin-right: 20px;
+    }
+  }
+
+  // contact
+  .contact {
+    padding: 80px 81px 100px;
+  }
+  .form__checkbox .fixCheckmark {
+    width: 262px;
+  }
+
+}

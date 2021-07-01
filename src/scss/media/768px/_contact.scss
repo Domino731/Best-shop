@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    padding: 20px;
+
+    &__element {
+      width: 100%;
+    }
+
+    &__info {
+      margin: 15px 0 40px;
+    }
+  }
+  .form__checkbox {
+    .fixCheckmark {
+      width: 170px;
+    }
+  }
+  .form .btn{
+    left: 0;
+  }
+}

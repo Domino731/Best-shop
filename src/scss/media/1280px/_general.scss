@@ -1,0 +1,93 @@
+@media (max-width: 1280px) {
+
+  // general
+  .container {
+    width: 1024px;
+  }
+
+  //statistics
+  .statistics {
+    margin-top: 50px;
+
+    &__container {
+      margin: 76px auto 74px;
+    }
+  }
+  // benefits
+  .benefits {
+    &__element, &__double {
+      width: 960px;
+    }
+
+    &__info::after {
+      width: 230px;
+    }
+
+    &__info {
+      width: 300px;
+      margin: 52px 36px;
+
+      &::after {
+        width: 190px;
+      }
+
+      &:hover {
+        &::after {
+          transition: 0.4s;
+          width: 100%;
+        }
+      }
+    }
+
+    &__title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .benefits__element--notebook .benefits__image {
+      img {
+        width: 320px;
+        height: auto;
+      }
+
+      &::before {
+        width: 190px;
+        height: 190px;
+      }
+    }
+
+    .benefits__element--phone .benefits__image {
+      img {
+        width: 320px;
+        height: auto;
+      }
+
+      &::before {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+
+  }
+
+  //pricing
+  .pricing {
+    &__box {
+      height: 428px;
+      width: 285px;
+
+      &--pro {
+        width: 310px;
+        height: 475px;
+        margin: 0 27px;
+      }
+    }
+  }
+
+  //contact
+  .form__checkbox .fixCheckmark {
+    width: 209px;
+  }
+}
