@@ -52,7 +52,7 @@
 </section>
 
 
-<section class="statistics">
+<section class="statistics" id="why-us">
     <div class="container">
         <h2>The most popular sales platform in country</h2>
 
@@ -85,7 +85,7 @@
 </section>
 
 
-<section class="benefits">
+<section class="benefits" id="benefits">
     <div class="benefits__container container">
 
         <div class="benefits__element benefits__element--notebook">
@@ -98,7 +98,7 @@
                 </p>
             </div>
             <div class="benefits__image">
-                <img src="dist/assets/images/macbook.png" alt="macbook" />
+                <img src="dist/assets/images/macbook.png" alt="macbook"/>
             </div>
         </div>
 
@@ -112,7 +112,7 @@
                 </p>
             </div>
             <div class="benefits__image">
-                <img src="dist/assets/images/iphone.png" alt="iPhone" />
+                <img src="dist/assets/images/iphone.png" alt="iPhone"/>
             </div>
         </div>
 
@@ -129,7 +129,7 @@
             </div>
 
             <div class="benefits__element benefits__element--image">
-                <img src="dist/assets/images/trumpet.png" alt="Trumpet" />
+                <img src="dist/assets/images/trumpet.png" alt="Trumpet"/>
             </div>
         </div>
 
@@ -137,7 +137,7 @@
 </section>
 
 
-<section class="pricing container">
+<section class="pricing container" id="prices">
     <h2>Pricing</h2>
     <div class="pricing__boxes">
 
@@ -151,7 +151,8 @@
                 <li class="pricing__element"><i class="far fa-check-square"></i>100 MB HDD</li>
                 <li class="pricing__element"><i class="far fa-check-square"></i>1 Subdomain</li>
                 <li class="pricing__element"><i class="far fa-check-square"></i>2 E-mails</li>
-                <li class="pricing__element pricing__element--not"><i class="far fa-window-close"></i>Two years licence</li>
+                <li class="pricing__element pricing__element--not"><i class="far fa-window-close"></i>Two years licence
+                </li>
                 <li class="pricing__element pricing__element--not"><i class="far fa-window-close"></i>Full support</li>
             </ul>
             <a href="#" class="btn btn--basicPack">Begin</a>
@@ -191,7 +192,79 @@
 </section>
 
 
-<section class="contact container ">
+<section class="calc">
+    <h2>Calculate how much you’ll pay</h2>
+
+    <div class="calc__columns">
+        <form class="calc__form">
+            <div class="calc__input">
+                <input type="number" class="form__input" id="products" min="1" step="1"
+                       placeholder="Products quantity"/>
+            </div>
+            <div class="calc__input">
+                <input type="number" class="form__input" id="orders" min="1" step="1"
+                       placeholder="Estimated orders in month"/>
+            </div>
+            <div class="calc__select" id="package" data-value="">
+                <div class="select__input open">
+                    Choose package
+                </div>
+
+                <ul class="select__dropdown" id="packages__list">
+                    <li data-value="basic">Basic</li>
+                    <li data-value="professional">Professional</li>
+                    <li data-value="premium">Premium</li>
+                </ul>
+            </div>
+            <label class="form__checkbox">
+                <input type="checkbox" id="accounting"/>
+                <span class="checkmark"></span>
+                <p class="consent__text">Accounting</p>
+            </label>
+            <label class="form__checkbox">
+                <input type="checkbox" id="terminal"/>
+                <span class="checkmark"></span>
+                <p class="consent__text">Rental of a payment terminal</p>
+            </label>
+        </form>
+
+        <div class="calc__summary">
+            <ul id="calc__pricesList">
+                <li class="list__item" id="products__summary">
+                    <span class="item__type">Products</span>
+                    <span class="item__calc"></span>
+                    <span class="item__price"></span>
+                </li>
+                <li class="list__item" id="orders__summary">
+                    <span class="item__type">Orders</span>
+                    <span class="item__calc"></span>
+                    <span class="item__price"></span>
+                </li>
+                <li class="list__item" id="package__summary">
+                    <span class="item__type">Package</span>
+                    <span class="item__calc"></span>
+                    <span class="item__price"></span>
+                </li>
+                <li class="list__item" id="accounting__summary">
+                    <span class="item__type">Accounting</span>
+                    <span class="item__price"></span>
+                </li>
+                <li class="list__item" id="terminal__summary">
+                    <span class="item__type">Terminal</span>
+                    <span class="item__price"></span>
+                </li>
+            </ul>
+            <div class="summary__total" id="total-price">
+                <span>Total</span>
+                <span class="total__price"></span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="contact container " id="contact">
     <div class="contact__element">
         <h2 class="contact__title">Any questions ?</h2>
         <strong class="contact__instruction">Leave your email address or contact us</strong>
@@ -212,18 +285,19 @@
         <form class="form">
             <div class="form__item">
                 <label class="form__label" for="name">Name</label>
-                <input type="text" class="form__input" id="name" />
+                <input type="text" class="form__input" id="name"/>
             </div>
             <div class="form__item">
                 <label class="form__label" for="name">Email</label>
-                <input type="email" class="form__input" id="email" />
+                <input type="email" class="form__input" id="email"/>
+
             </div>
 
             <div class="form__consent">
 
                 <label class="form__checkbox">
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span class="checkmark fixCheckmark"></span>
                     <p class="consent__text">
                         I hereby give consent for my personal data included in my
                         application to be processed for the purposes of the recruitment

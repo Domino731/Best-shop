@@ -66,7 +66,8 @@
     border-bottom: 1px solid $color-primary;
     background-color: transparent;
     line-height: 2.625rem;
-    &:focus{
+
+    &:focus {
       transition: 0.05s;
       border-bottom: 3px solid $color-primary;
     }
@@ -98,13 +99,17 @@
 
 .form__checkbox {
   .checkmark {
-    width: 117px;
+    width: 25px;
     height: 25px;
     border: 2px solid $color-primary;
     display: inline-block;
     border-radius: 3px;
     background: $color-primary url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/1250% no-repeat;
     transition: background-size 0.2s ease;
+  }
+
+  .fixCheckmark {
+  width: 117px;
   }
 
   input:checked + .checkmark {

@@ -1,7 +1,9 @@
 body {
   font-family: $font-open-sans;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
@@ -46,6 +48,7 @@ h2 {
     font-size: 0.8125rem;
     background-color: $color-green;
   }
+
 }
 
 
