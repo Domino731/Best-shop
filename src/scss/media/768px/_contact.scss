@@ -1,7 +1,7 @@
 @media (max-width: 768px) {
   .contact {
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
 
     &__element {
       width: 100%;
@@ -16,7 +16,8 @@
       width: 170px;
     }
   }
-  .form .btn{
+  .form .btn {
     left: 0;
   }
+
 }

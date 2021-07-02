@@ -1,0 +1,108 @@
+@media (max-width: 410px) {
+  .container {
+    width: 360px;
+  }
+  body {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  //hero
+  .hero {
+    &__description {
+      margin-top: 11px;
+      margin-bottom: 24px;
+    }
+
+    &__content {
+      margin-top: 97px;
+      text-align: center;
+    }
+  }
+
+  //benefits
+  .benefits {
+    &__element {
+      width: 300px;
+      padding: 7px;
+    }
+
+    .benefits__element--notebook .benefits__image::before {
+      width: 140px;
+      height: 140px;
+    }
+
+    .benefits__element--phone .benefits__image::before {
+      width: 160px;
+      height: 160px;
+    }
+
+    .benefits__element--notebook .benefits__image img,
+    .benefits__element--phone .benefits__image img {
+      width: 220px;
+      height: auto;
+      margin-top: 62px;
+      margin-bottom: 0;
+    }
+  }
+
+  //pricing
+  .pricing {
+    &__box {
+      width: 339px;
+      height: 277px;
+
+      &--premium, &--basic {
+        width: 293px;
+        height: 251px;
+      }
+    }
+
+    &__element {
+      font-size: 14px;
+    }
+  }
+  .form__checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+  }
+  // contact
+  .contact {
+    &__title {
+      font-size: 40px;
+    }
+
+    .form__checkbox .fixCheckmark {
+      width: 190px;
+      height: 20px;
+    }
+  }
+
+  // footer
+  .footer {
+    &__container {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__icons {
+      margin: 0;
+
+      a {
+        padding: 5px 12px;
+      }
+    }
+
+    &__info {
+      margin: 0;
+      text-align: center;
+    }
+
+    &__copy, .logo {
+      margin: 2px 0;
+    }
+  }
+}

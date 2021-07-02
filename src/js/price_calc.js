@@ -180,7 +180,7 @@ export class price_calc {
                     this.update_summary("package__summary", text, this.prices.package[text])
                 }
 
-               // if the user selected a package and pressed again, delete it
+                // if the user selected a package and pressed again, delete it
                 else {
                     this.summary.package.classList.remove("open")
                     this.form.package.firstElementChild.innerText = "Choose package"

@@ -7,7 +7,8 @@
     &__element {
       flex-direction: column-reverse;
       align-items: center;
-      &--image{
+
+      &--image {
         margin: -6px 0;
       }
     }
@@ -32,7 +33,8 @@
       margin-bottom: 20px;
       text-align: left;
     }
-    &__double{
+
+    &__double {
       display: flex;
       flex-direction: column;
       align-items: center;

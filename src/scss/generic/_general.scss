@@ -1,17 +1,22 @@
 body {
   font-family: $font-open-sans;
+  overflow-x: hidden;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 a {
   text-decoration: none;
 }
+
 h2 {
   font-family: $font-raleway;
   font-size: 2.25rem;
   text-align: center;
 }
+
 .container {
   width: 1352px;
   margin: 0 auto;
@@ -25,25 +30,30 @@ h2 {
   padding: 16px 65px;
   border-radius: 40px;
   border: none;
-  &--primary{
+
+  &--primary {
     background-color: $color-primary;
     border-radius: 40px;
     box-shadow: 3px 10px 14px $color-primary-shadow;
   }
-  &--large{
+
+  &--large {
     padding: 22px 155px;
   }
-  &--basicPack{
+
+  &--basicPack {
     position: relative;
     font-size: 0.8125rem;
     background-color: $color-redish;
   }
-  &--proPack{
+
+  &--proPack {
     position: relative;
     font-size: 0.8125rem;
     background-color: $color-primary;
   }
-  &--premiumPack{
+
+  &--premiumPack {
     position: relative;
     font-size: 0.8125rem;
     background-color: $color-green;

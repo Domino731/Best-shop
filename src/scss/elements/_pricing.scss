@@ -22,6 +22,7 @@
     width: 370px;
     height: 461px;
     transition: 0.2s;
+
     &--basic {
       border: 2px solid $color-redish;
       box-shadow: 0 0 4px $color-redish;
@@ -38,10 +39,12 @@
       border: 2px solid $color-green;
       box-shadow: 0 0 4px $color-green;
     }
-    &:hover{
+
+    &:hover {
       transition: 0.2s;
       transform: scale(1.1);
     }
+
     .btn {
       position: absolute;
       bottom: -22px;
@@ -94,9 +97,9 @@
     color: $color-green;
   }
 
-  &--not {
-    i {
-      color: $color-redish;
-    }
+
+  i[class*="fa-window-close"] {
+    color: $color-redish;
   }
+
 }

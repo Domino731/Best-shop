@@ -1,0 +1,39 @@
+@media (max-width: 480px) {
+  .container {
+    width: 390px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  body {
+    font-size: 13px;
+  }
+  // benefits
+  .benefits {
+    &__element {
+      width: 330px;
+      padding: 5px;
+    }
+  }
+  //price calc
+  .calc {
+
+    &__form, &__summary {
+      width: 76%;
+    }
+  }
+  .form__checkbox .checkmark {
+    width: 25px;
+  }
+
+  // contact
+  .form__checkbox .fixCheckmark {
+    width: 223px;
+  }
+  // footer
+  .footer {
+    &__icons a:first-of-type {
+      margin-right: 2px;
+    }
+  }
+}

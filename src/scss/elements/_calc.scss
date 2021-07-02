@@ -156,12 +156,14 @@
       }
     }
   }
-  .form__checkbox{
+
+  .form__checkbox {
     margin-bottom: 10px;
   }
 }
+
 @keyframes showEffect {
-  100%{
+  100% {
     transform: scale(1.0);
   }
 }

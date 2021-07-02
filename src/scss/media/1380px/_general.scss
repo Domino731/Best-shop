@@ -3,12 +3,12 @@
   .container {
     width: 1280px;
   }
-  .logo{
+  .logo {
     margin-left: 50px;
   }
   //header
-  .header{
-    &__nav{
+  .header {
+    &__nav {
       margin-right: 50px;
     }
   }
@@ -39,7 +39,6 @@
   }
 
 
-
   // pricing
   .pricing {
     &__boxes {
@@ -48,19 +47,21 @@
 
     &__box {
       width: 330px;
-      &--pro{
+
+      &--pro {
         width: 360px;
-       margin: 0 76px;
+        margin: 0 76px;
       }
     }
   }
 
   //footer
-  .footer{
-    &__icons{
+  .footer {
+    &__icons {
       margin-right: 54px;
     }
-    &__copy{
+
+    &__copy {
       margin-left: 54px;
     }
   }

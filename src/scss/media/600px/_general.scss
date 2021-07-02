@@ -2,10 +2,16 @@
   .container {
     width: 460px;
   }
-  h2{
+  h2 {
     font-size: 36px;
   }
+  .logo {
+    margin-left: 0;
+  }
+  .header i[class*=fa-compass] {
 
+    margin-right: 0;
+  }
   // statistics
   .statistics {
     &__container {
@@ -13,37 +19,40 @@
       flex-direction: column;
       align-items: center;
     }
-    &__element{
+
+    &__element {
       margin-bottom: 35px;
     }
   }
 
   // benefits
-  .benefits{
-    &__element{
+  .benefits {
+    &__element {
       width: 430px;
     }
   }
 
   //pricing
-  .pricing{
+  .pricing {
     &__box {
-      width: 403px;
       height: 340px;
+
       &--basic, &--premium {
-        width: 370px;
         height: 278px;
       }
     }
   }
 
   //price calc
-  .calc{
-    &__columns{
+  .calc {
+    &__columns {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
   }
-
+  //contact
+  .form__checkbox .fixCheckmark {
+    width: 183px;
+  }
 }

@@ -1,14 +1,16 @@
 @media (max-width: 768px) {
   .header {
-    &__container{
-      justify-content: space-between;}
+    &__container {
+      justify-content: space-between;
+    }
 
     i[class*="fa-compass"] {
       display: block;
       font-size: 1.875rem;
       margin-right: 50px;
     }
-    &__nav{
+
+    &__nav {
 
       width: 100vh;
       background: white;
@@ -23,11 +25,12 @@
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
     }
   }
-   .nav__link{
-     margin-bottom: 10px;
-     padding: 10px 20px;
-   }
+  .nav__link {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+  }
 }
-.active{
+
+.active {
   display: flex;
 }

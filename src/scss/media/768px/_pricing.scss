@@ -6,7 +6,7 @@
     }
 
     &__box {
-      width: 488px;
+      width: 96%;
       height: 404px;
       margin: 35px;
 
@@ -16,18 +16,21 @@
       align-items: center;
 
       &--basic, &--premium {
-        width: 430px;
+        width: 87%;
         height: 350px;
       }
     }
 
     &__info {
-      margin-right: 40px;
+      width: 50%;
+      margin: 0;
     }
 
     &__list {
-      margin-left: 40px;
+      width: 50%;
+      margin: 0;
       text-align: left;
     }
+
   }
 }

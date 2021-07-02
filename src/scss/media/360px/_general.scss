@@ -1,0 +1,29 @@
+@media (max-width: 360px) {
+  .container {
+    width: 310px;
+  }
+  body {
+    font-size: 11px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+
+  // benefits
+  .benefits {
+    &__element {
+      width: 276px;
+    }
+  }
+
+  // pricing
+  .pricing {
+    &__box {
+      width: 294px;
+
+      &--basic, &--premium {
+        width: 255px;
+      }
+    }
+  }
+}
