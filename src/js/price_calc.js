@@ -1,7 +1,9 @@
-//this is the calculator class which is responsible for converting the price
 
+/** this is the calculator class which is responsible for pricing summary panel */
 export class price_calc {
     constructor() {
+
+        // pricing 
         this.prices = {
             products: 0.5,
             orders: 0.25,
@@ -34,13 +36,18 @@ export class price_calc {
             terminal: document.querySelector("#terminal__summary"),
             total: document.querySelector("#total-price")
         }
+
+        // initialization of methods
+        this.init();
     }
 
-    // displaying the final price
-    update_total() {
+    // displaying the final price (sum of all selected options and packages)
+    updateTotal() {
 
         //checking the pricing elements
-        const show = document.querySelectorAll(" #calc__pricesList .open").length > 0
+        const show = document.querySelectorAll(" #calc__pricesList .open").length > 0;
+
+        // check if the card with total price is active
         if (show) {
             this.summary.total.classList.add("open")
 
@@ -51,9 +58,8 @@ export class price_calc {
             const accounting = this.form.accounting.checked ? this.prices.accounting : 0;
             const terminal = this.form.terminal.checked ? this.prices.terminal : 0;
 
-            const final_price = this.summary.total.lastElementChild
-
-            //final price
+            // set final price text
+            const final_price = this.summary.total.lastElementChild;
             final_price.innerText = "$" + (productSum + ordersSum + packagePrice + accounting + terminal)
 
         } else {
@@ -62,67 +68,76 @@ export class price_calc {
         }
     }
 
-    //updating single price
-    // params //
-    // id --> id on the basis of which an element is retrieved from dom
-    // calc --> price calc (5 * $10*)
-    // total -->  final summary
-    update_summary(id, calc, total) {
+    /**
+     * updating panel for particular pricing
+     * @param {*} id id on the basis of which an element is seaching in DOM tree
+     * @param {*} calc price calc text -> 5 * $10
+     * @param {*} total price
+     */
+    updateSummary(id, calc, total) {
+
+        // elements for operations
         const summary = this.summary.list.querySelector("#" + id);
         const summaryCalc = summary.querySelector(".item__calc");
         const summaryTotal = summary.querySelector(".item__price");
 
-        //price calc
+        // price calculation
         if (summaryCalc !== null) {
             summaryCalc.innerText = calc;
         }
 
         //final summary
         summaryTotal.innerText = "$" + total;
-
     }
 
-    // updating single product
-    // params //
-    // type --> for addEventListener
-    update_product(type) {
-        this.form.products.addEventListener(type, (e) => {
+    /**
+     * updating single product pricing bar
+     * @param {*} eventType - event type for (keyUp or click) addEventListener
+     */
+    updateProduct(eventType) {
+        this.form.products.addEventListener(eventType, (e) => {
             const value = e.target.valueAsNumber
 
             //show only when value is bigger than 0
             if (isNaN(value) === false && value > 0) {
-                const calc_price = `${value} * ${this.prices.products}`
-                const final_price = value * this.prices.products
-                this.update_summary("products__summary", calc_price, final_price)
-                this.summary.products.classList.add("open")
+                const calc_price = `${value} * ${this.prices.products}`;
+                const final_price = value * this.prices.products;
+                this.updateSummary("products__summary", calc_price, final_price);
+                this.summary.products.classList.add("open");
             }
 
             // else hide
             if (isNaN(value)) {
-                this.summary.products.classList.remove("open")
+                this.summary.products.classList.remove("open");
             }
 
             //updating total
-            this.update_total()
+            return this.updateTotal()
         })
     }
 
-    // just like above but for orders
-    update_orders(type) {
+    // updating card with pricing for orders
+    updateOrders(type) {
         this.form.orders.addEventListener(type, (e) => {
-            const value = e.target.valueAsNumber
+
+            // input value
+            const value = e.target.valueAsNumber;
+
             if (isNaN(value) === false && value > 0) {
+                // set data
+                const calc_price = `${value} * ${this.prices.orders}`;
+                const final_price = value * this.prices.orders;
 
-                const calc_price = `${value} * ${this.prices.orders}`
-                const final_price = value * this.prices.orders
+                // updata summary panel
+                this.updateSummary("orders__summary", calc_price, final_price);
 
-                this.update_summary("orders__summary", calc_price, final_price)
-                this.summary.orders.classList.add("open")
+                // show bar with orders pricing 
+                this.summary.orders.classList.add("open");
             }
             if (isNaN(value)) {
-                this.summary.orders.classList.remove("open")
+                this.summary.orders.classList.remove("open");
             }
-            this.update_total()
+            return this.updateTotal();
         })
     }
 
@@ -133,34 +148,34 @@ export class price_calc {
 
             //show summary only when checked
             if (checked) {
-                this.summary.accounting.classList.add("open")
-                this.update_summary("accounting__summary", "", this.prices.accounting)
+                this.summary.accounting.classList.add("open");
+                this.updateSummary("accounting__summary", "", this.prices.accounting);
                 ;
             }
 
             // else hide
             else {
-                this.summary.accounting.classList.remove("open")
+                this.summary.accounting.classList.remove("open");
             }
 
             // updating total
-            this.update_total()
-        })
+            return this.update_total();
+        });
     }
 
-    // just like above
+    // for accounting checkbox
     checkboxTerminal() {
         this.form.terminal.addEventListener("change", (e) => {
             const checked = e.currentTarget.checked;
             if (checked) {
-                this.summary.terminal.classList.add("open")
-                this.update_summary("terminal__summary", "", this.prices.terminal)
+                this.summary.terminal.classList.add("open");
+                this.updateSummary("terminal__summary", "", this.prices.terminal);
                 ;
             } else {
-                this.summary.terminal.classList.remove("open")
+                this.summary.terminal.classList.remove("open");
             }
-            this.update_total()
-        })
+            return this.updateTotal();
+        });
 
     }
 
@@ -168,37 +183,37 @@ export class price_calc {
     selectPackage() {
         this.form.package.addEventListener("click", (e) => {
 
-                // when the user click selection bar, then show list with packages
-                this.form.package.classList.toggle("open")
+            // when the user click selection bar, then show list with packages
+            this.form.package.classList.toggle("open")
 
-                // add package only when its not undefined
-                if (e.target.dataset.value !== undefined) {
-                    const text = e.target.dataset.value
-                    this.form.package.dataset.value = text
-                    this.form.package.firstElementChild.innerText = text
-                    this.summary.package.classList.add("open")
-                    this.update_summary("package__summary", text, this.prices.package[text])
-                }
-
-                // if the user selected a package and pressed again, delete it
-                else {
-                    this.summary.package.classList.remove("open")
-                    this.form.package.firstElementChild.innerText = "Choose package"
-                }
-                this.update_total()
+            // add package only when its not undefined
+            if (e.target.dataset.value !== undefined) {
+                const text = e.target.dataset.value
+                this.form.package.dataset.value = text
+                this.form.package.firstElementChild.innerText = text
+                this.summary.package.classList.add("open")
+                this.updateSummary("package__summary", text, this.prices.package[text])
             }
+
+            // if the user selected a package and pressed again, delete it
+            else {
+                this.summary.package.classList.remove("open")
+                this.form.package.firstElementChild.innerText = "Choose package"
+            }
+            this.updateTotal()
+        }
         )
     }
 
     //initialization of the above functions
-    initEvents() {
-        this.update_product("change")
-        this.update_product("keyup")
-        this.update_orders("change")
-        this.update_orders("keyup")
-        this.checkboxAccounting()
-        this.checkboxTerminal()
-        this.selectPackage()
+    init() {
+        this.updateProduct("change");
+        this.updateProduct("keyup");
+        this.updateOrders("change");
+        this.updateOrders("keyup");
+        this.checkboxAccounting();
+        this.checkboxTerminal();
+        this.selectPackage();
     }
 }
 

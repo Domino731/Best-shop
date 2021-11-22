@@ -1,6 +1,5 @@
 import {price_calc} from "./price_calc";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const pricing_calc = new price_calc()
-    pricing_calc.initEvents()
+    const pricing_calc = new price_calc();
 });
