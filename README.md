@@ -1,5 +1,5 @@
 # Best-shop
-The simple single page for buisness with form validation. RWD traning. 
+The simple single page for buisness with form validation. CSS & HTML semantic traning. 
 
 ## Technology
 * Gulp
