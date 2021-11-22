@@ -146,8 +146,9 @@ export class price_calc {
         this.form.accounting.addEventListener("change", (e) => {
             const checked = e.currentTarget.checked;
 
-            //show summary only when checked
+            // show summary only on checked checkbox
             if (checked) {
+                // update summary
                 this.summary.accounting.classList.add("open");
                 this.updateSummary("accounting__summary", "", this.prices.accounting);
                 ;
@@ -163,11 +164,14 @@ export class price_calc {
         });
     }
 
-    // for accounting checkbox
+    // for rental of a payment terminal checkbox
     checkboxTerminal() {
         this.form.terminal.addEventListener("change", (e) => {
             const checked = e.currentTarget.checked;
+
+            // show summary only on checked checkbox
             if (checked) {
+                // update summary
                 this.summary.terminal.classList.add("open");
                 this.updateSummary("terminal__summary", "", this.prices.terminal);
                 ;
@@ -179,30 +183,30 @@ export class price_calc {
 
     }
 
-    // selecting packages
+    // selecting package
     selectPackage() {
         this.form.package.addEventListener("click", (e) => {
 
-            // when the user click selection bar, then show list with packages
-            this.form.package.classList.toggle("open")
+            // when the user click selection bar, then show list with available packages
+            this.form.package.classList.toggle("open");
 
             // add package only when its not undefined
             if (e.target.dataset.value !== undefined) {
-                const text = e.target.dataset.value
-                this.form.package.dataset.value = text
-                this.form.package.firstElementChild.innerText = text
-                this.summary.package.classList.add("open")
-                this.updateSummary("package__summary", text, this.prices.package[text])
+                const text = e.target.dataset.value;
+                this.form.package.dataset.value = text;
+                this.form.package.firstElementChild.innerText = text;
+                this.summary.package.classList.add("open");
+                this.updateSummary("package__summary", text, this.prices.package[text]);
             }
 
-            // if the user selected a package and pressed again, delete it
+            // if the user selected a package and pressed again then remove this package
             else {
-                this.summary.package.classList.remove("open")
-                this.form.package.firstElementChild.innerText = "Choose package"
+                this.summary.package.classList.remove("open");
+                this.form.package.firstElementChild.innerText = "Choose package";
             }
-            this.updateTotal()
+            return this.updateTotal();
         }
-        )
+        );
     }
 
     //initialization of the above functions
